@@ -15,24 +15,14 @@ public class Spielfeld
      */
     public Spielfeld()
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        f_Anzeige();
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
-    }
     
-    public void drehen() 
+    public void f_Anzeige() 
     {
-    
+        System.out.println(". . .");
+        System.out.println(". . .");
+        System.out.println(". . .");
     }
 }
