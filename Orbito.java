@@ -1,19 +1,20 @@
 
 /**
- * Beschreiben Sie hier die Klasse Spielfeld.
- * 4x4 Feld, 
+ * Beschreiben Sie hier die Klasse Orbito.
+ * bewegt alle Kugeln eins gegen den Uhrzeigersinn,
+ * Regeln und checken, ob irgendwo eine 4er-Reihe ist
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Spielfeld
+public class Orbito
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
 
     /**
-     * Konstruktor für Objekte der Klasse Spielfeld
+     * Konstruktor für Objekte der Klasse Orbito
      */
-    public Spielfeld()
+    public Orbito()
     {
         // Instanzvariable initialisieren
         x = 0;
@@ -29,10 +30,5 @@ public class Spielfeld
     {
         // tragen Sie hier den Code ein
         return x + y;
-    }
-    
-    public void drehen() 
-    {
-    
     }
 }
