@@ -16,11 +16,8 @@ public class Kugeln extends Orbito
      */
     public Kugeln()
     {
-        
+        //
     }
     
-    public void bewegenSchwarz()
-    {
     
-    }
 }
