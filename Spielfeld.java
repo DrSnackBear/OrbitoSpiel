@@ -25,7 +25,7 @@ public class Spielfeld
         System.out.println(". . . .");
         System.out.println(". . . .");
         System.out.println(". . . .");
-        
+        System.out.println("       ");
         System.out.println("GAME START");
     }
 }
