@@ -1,34 +1,39 @@
-
+import java.util.Scanner;
 /**
  * Beschreiben Sie hier die Klasse Spieler.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
+
 public class Spieler extends Orbito
 
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    
 
     /**
      * Konstruktor für Objekte der Klasse Spieler
      */
     public Spieler()
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        //
     }
-
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
+    
+    public void abfrageName1 (String[] args)
     {
-        // tragen Sie hier den Code ein
-        return x + y;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Wie heißt Spieler 1 ?");
+        String name = scanner.nextLine();
+        System.out.println("Spieler1 heißt" + name + ".");
     }
+    
+    public void abfrageName2 (String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Wie heißt Spieler 2 ?");
+        String name = scanner.nextLine();
+        System.out.println("Spieler 2 heißt" + name + ".");
+    }
+    
 }

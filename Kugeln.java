@@ -19,5 +19,8 @@ public class Kugeln extends Orbito
         //
     }
     
+    public void schwarzKugel()
+    {
     
+    }
 }
