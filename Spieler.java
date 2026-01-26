@@ -6,6 +6,7 @@
  * @version (eine Versionsnummer oder ein Datum)
  */
 public class Spieler
+
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
