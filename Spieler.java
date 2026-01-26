@@ -9,26 +9,15 @@ public class Spieler
 
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    public String name;
 
     /**
      * Konstruktor für Objekte der Klasse Spieler
      */
-    public Spieler()
+    public Spieler(String name)
     {
         // Instanzvariable initialisieren
-        x = 0;
+        this.name = name;
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
-    }
 }
