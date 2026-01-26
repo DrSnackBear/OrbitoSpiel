@@ -21,8 +21,11 @@ public class Spielfeld
     
     public void f_Anzeige() 
     {
-        System.out.println(". . .");
-        System.out.println(". . .");
-        System.out.println(". . .");
+        System.out.println(". . . .");
+        System.out.println(". . . .");
+        System.out.println(". . . .");
+        System.out.println(". . . .");
+        
+        System.out.println("GAME START");
     }
 }
