@@ -5,7 +5,7 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Spieler1
+public class Spieler
 
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
@@ -14,7 +14,7 @@ public class Spieler1
     /**
      * Konstruktor für Objekte der Klasse Spieler
      */
-    public Spieler1()
+    public Spieler()
     {
         // Instanzvariable initialisieren
         x = 0;
