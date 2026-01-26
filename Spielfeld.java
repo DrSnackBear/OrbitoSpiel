@@ -1,7 +1,7 @@
 
 /**
  * Beschreiben Sie hier die Klasse Spielfeld.
- * 
+ * 4x4 Feld, 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */

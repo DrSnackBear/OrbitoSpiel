@@ -1,20 +1,20 @@
 
 /**
- * Beschreiben Sie hier die Klasse Kugeln.
- * 2 Farben, je 8 Kugeln pro Spieler, werden nacheinander auf Spielfeld gelegt,
- * umgelegt und eins weiter gegen den Uhrzeigersinn gedreht.
+ * Beschreiben Sie hier die Klasse Orbito.
+ * bewegt alle Kugeln eins gegen den Uhrzeigersinn,
+ * Regeln und checken, ob irgendwo eine 4er-Reihe ist
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Kugeln
+public class Orbito
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
 
     /**
-     * Konstruktor für Objekte der Klasse Kugeln
+     * Konstruktor für Objekte der Klasse Orbito
      */
-    public Kugeln()
+    public Orbito()
     {
         // Instanzvariable initialisieren
         x = 0;
