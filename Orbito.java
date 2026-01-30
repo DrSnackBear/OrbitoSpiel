@@ -1,26 +1,27 @@
-
+import java.util.Scanner;
 /**
  * Beschreiben Sie hier die Klasse Orbito.
- * bewegt alle Kugeln eins gegen den Uhrzeigersinn,
- * Regeln und checken, ob irgendwo eine 4er-Reihe ist
+ * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Orbito extends Spielfeld
+public class Orbito
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    public Orbito() {
+        //Spieler spieler = new Spieler(String name, String farbe, int punktestand); // Spieler wird erstellt
+        //spieler.resetPunktestand();
+        
+        Scanner scanner = new Scanner(System.in);
 
-    /**
-     * Konstruktor für Objekte der Klasse Orbito
-     */
-    public Orbito()
-    {
-       //
-    }
+        System.out.print("Name eingeben: ");
+        String name = scanner.nextLine();
 
-    public void kugelnBewegen ()
-    {
-        // if
+        System.out.print("Farbe eingeben: ");
+        String farbe = scanner.nextLine();
+
+        Spieler spieler = new Spieler(name, farbe);
+        spieler.resetPunktestand();
+
+        System.out.println("Spiel gestartet mit Punktestand 0!");
     }
 }
