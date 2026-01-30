@@ -10,12 +10,12 @@ public class Spieler extends Orbito
 
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+
     /**
      * Konstruktor für Objekte der Klasse Spieler
      */
     public Spieler(String name)
     {
-
     }
 
     public void abfrageName1 (String[] args)
