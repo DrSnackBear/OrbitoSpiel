@@ -20,9 +20,10 @@ public class Spieler
         this.farbe = farbe;
         punktestand = 0;
     }
-        public void resetPunktestand() {
+    public void resetPunktestand() {
         this.punktestand = 0;
     }
+
     //Kugel legeKugel(String farbe) { //Spieler kann Kugeln legen
       //    return new Kugel(farbe);
     //}

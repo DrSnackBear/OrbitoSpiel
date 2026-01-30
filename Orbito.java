@@ -20,6 +20,14 @@ public class Orbito
         spieler.resetPunktestand();
 
         System.out.println("Spiel gestartet mit Punktestand 0!");
+        //pause(1);
         Spielfeld spielfeld = new Spielfeld();
     }
+    /*public static void pause(int sekunden) {
+        try {
+            Thread.sleep(sekunden * 1000); // Sekunden → Millisekunden
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }*/
 }
