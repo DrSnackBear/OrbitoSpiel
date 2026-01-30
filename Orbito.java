@@ -8,9 +8,6 @@ import java.util.Scanner;
 public class Orbito
 {
     public Orbito() {
-        //Spieler spieler = new Spieler(String name, String farbe, int punktestand); // Spieler wird erstellt
-        //spieler.resetPunktestand();
-        
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Name eingeben: ");
@@ -23,5 +20,6 @@ public class Orbito
         spieler.resetPunktestand();
 
         System.out.println("Spiel gestartet mit Punktestand 0!");
+        Spielfeld spielfeld = new Spielfeld();
     }
 }

@@ -16,11 +16,11 @@ public class Spielfeld
      */
     public Spielfeld()
     {
-        //
+        Anzeige();
     }
 
     
-    public void f_Anzeige() 
+    public void Anzeige() 
     {
         System.out.println("  A B C D");
         System.out.println("1 . . . .");
