@@ -8,9 +8,6 @@
  */
 public class Kugeln extends Orbito
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
-
     /**
      * Konstruktor für Objekte der Klasse Kugeln
      */
@@ -19,8 +16,8 @@ public class Kugeln extends Orbito
         //
     }
     
-    public void schwarzKugel()
+    public void weiterschieben()
     {
-    
+        
     }
 }
