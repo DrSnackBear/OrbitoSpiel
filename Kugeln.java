@@ -6,7 +6,7 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Kugeln extends Orbito
+public class Kugeln extends Spielfeld
 {
     /**
      * Konstruktor für Objekte der Klasse Kugeln
