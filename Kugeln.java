@@ -6,7 +6,7 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Kugeln extends Orbito
+public class Kugeln extends Spielfeld
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
@@ -21,6 +21,6 @@ public class Kugeln extends Orbito
     
     public void schwarzKugel()
     {
-    
+        
     }
 }

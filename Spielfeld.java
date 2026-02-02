@@ -1,4 +1,5 @@
-
+import java.util.Scanner;
+import javafx.scene.control.Spinner;
 /**
  * Beschreiben Sie hier die Klasse Spielfeld.
  * 4x4 Feld, 
@@ -8,14 +9,26 @@
  */
 public class Spielfeld
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
 
     /**
      * Konstruktor für Objekte der Klasse Spielfeld
      */
     public Spielfeld()
     {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Name eingeben: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Farbe eingeben: ");
+        String farbe = scanner.nextLine();
+
+        Spieler spieler = new Spieler(name, farbe);
+        spieler.resetUngenutzteKugeln();
+
+        System.out.println("Spiel gestartet mit 8 Kugeln!");
+        //pause(1);
+        //Spielfeld spielfeld = new Spielfeld();
         Anzeige();
     }
 
@@ -29,5 +42,23 @@ public class Spielfeld
         System.out.println("4 . . . .");
         System.out.println("          ");
         System.out.println("GAME START");
+    }
+    
+    /*public void pruefeSpielzustand() {
+        if (spieler.getLeben() <= 0) {
+            spielVerloren();
+        }
+
+        if (alleZieleGetroffen()) {
+            spielGewonnen();
+        }
+    *///}
+
+    private void spielGewonnen() {
+        System.out.println("Gewonnen!");
+    }
+
+    private void spielVerloren() {
+        System.out.println("Verloren!");
     }
 }
