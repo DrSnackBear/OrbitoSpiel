@@ -15,6 +15,7 @@ public class Spielfeld
      */
     public Spielfeld()
     {
+
         //Scanner scanner = new Scanner(System.in);
 
         //System.out.print("Name eingeben: ");
@@ -31,40 +32,60 @@ public class Spielfeld
         //Spielfeld spielfeld = new Spielfeld();
         //Anzeige();
         
+        Begrüßung();
+        spielerZuweisung();
+        anzeige();
+    }
     
-        /*public void Anzeige() 
-        {
-        System.out.println("  A B C D");
-        System.out.println("1 . . . .");
-        System.out.println("2 . . . .");
-        System.out.println("3 . . . .");
-        System.out.println("4 . . . .");
-        System.out.println("          ");
-        System.out.println("GAME START");
-        }
-        */
+    public void Begrüßung() {
+        System.out.println("Hallo liebe Orbito-Spieler.");
+        System.out.println("Gebt euren Namen ein. Der erste Spieler spielt mit der Farbe weiß und beginnt.");   
+        System.out.println("Viel Spaß beim Spielen!");   
+    }
+    
+    public void spielerZuweisung() {
+        Scanner scanner = new Scanner(System.in);
+
+        //Spieler 1
+        System.out.print("Name Spieler 1: ");
+        String name1 = scanner.nextLine();
+        Spieler spieler1 = new Spieler(1, name1, "weiß");
+
+        //System.out.print("Farbe eingeben: ");
+        //String farbe = scanner.nextLine();
+        spieler1.resetUngenutzteKugeln();
+
+        System.out.println(name1 + " gestartet mit 8 Kugeln!");
+        //pause(1);
+        //Spieler 2
+        System.out.print("Name Spieler 2: ");
+        String name2 = scanner.nextLine();
+        Spieler spieler2 = new Spieler(2, name2, "schwarz");
+        spieler2.resetUngenutzteKugeln();
+        System.out.println(name2 + " gestartet mit 8 Kugeln!");
     }
     
     public void pruefeSpielzustand() {
-        if (spieler.getLeben() <= 0) {
+        /*if (spieler.getLeben() <= 0) {
             spielVerloren();
         }
 
         if (alleZieleGetroffen()) {
             spielGewonnen();
         }
+        }*/
     }
 
     private void spielGewonnen() {
-        System.out.println("Gewonnen!");
+        //System.out.println(spieler1 + "hat gewonnen!");
     }
 
     private void spielVerloren() {
-        System.out.println("Verloren!");
+        //System.out.println(spieler2 * "hat verloren!");
     }
     
-    public void erzeugung () {
-        System.out.println("0 1 2 3");
+    public void anzeige () {
+        System.out.println("  0 1 2 3");
         for (int x = 0; x < 4 ; x++) {
             String spalte = "" + x;
             for (int y = 0; y < 4; y++) {

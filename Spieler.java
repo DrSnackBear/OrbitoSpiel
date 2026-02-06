@@ -8,17 +8,14 @@
 public class Spieler
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+    public int spielerNummer;
     public String name;
     public String farbe;
     public int ungenutzteKugeln;
-
-    /**
-     * Konstruktor für Objekte der Klasse Spiler
-     */
-    public Spieler(String name,String farbe) {
+    public Spieler(int spielerNummer, String name,String farbe) {
+        this.spielerNummer = spielerNummer;
         this.name = name;
         this.farbe = farbe;
-        //ungenutzteKugeln = 8;
     }
     public void resetUngenutzteKugeln() {
         this.ungenutzteKugeln= 8;
