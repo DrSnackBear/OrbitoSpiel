@@ -11,13 +11,15 @@ public class Kugeln extends Spielfeld
     /**
      * Konstruktor für Objekte der Klasse Kugeln
      */
-    public Kugeln()
+    Strring color;
+    public Kugeln(String color)
     {
         //
+        //this.color = color
     }
     
     public void weiterschieben()
     {
-        
+        //Kugeln kugel = new Kugeln("s")
     }
 }

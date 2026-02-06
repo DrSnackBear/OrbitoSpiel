@@ -9,32 +9,31 @@ import javafx.scene.control.Spinner;
  */
 public class Spielfeld
 {
-
+    private Kugeln[][] spielbrett;
     /**
      * Konstruktor für Objekte der Klasse Spielfeld
      */
     public Spielfeld()
     {
-        Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Name eingeben: ");
-        String name = scanner.nextLine();
+        //System.out.print("Name eingeben: ");
+        //String name = scanner.nextLine();
 
-        System.out.print("Farbe eingeben: ");
-        String farbe = scanner.nextLine();
+        //System.out.print("Farbe eingeben: ");
+        //String farbe = scanner.nextLine();
 
-        Spieler spieler = new Spieler(name, farbe);
-        spieler.resetUngenutzteKugeln();
-
+        //Spieler spieler = new Spieler(name, farbe);
+        //spieler.resetUngenutzteKugeln();
+        this.spielbrett = new Kugeln [4][4];
         System.out.println("Spiel gestartet mit 8 Kugeln!");
         //pause(1);
         //Spielfeld spielfeld = new Spielfeld();
-        Anzeige();
-    }
-
+        //Anzeige();
+        
     
-    public void Anzeige() 
-    {
+        /*public void Anzeige() 
+        {
         System.out.println("  A B C D");
         System.out.println("1 . . . .");
         System.out.println("2 . . . .");
@@ -42,9 +41,11 @@ public class Spielfeld
         System.out.println("4 . . . .");
         System.out.println("          ");
         System.out.println("GAME START");
+        }
+        */
     }
     
-    /*public void pruefeSpielzustand() {
+    public void pruefeSpielzustand() {
         if (spieler.getLeben() <= 0) {
             spielVerloren();
         }
@@ -52,7 +53,7 @@ public class Spielfeld
         if (alleZieleGetroffen()) {
             spielGewonnen();
         }
-    *///}
+    }
 
     private void spielGewonnen() {
         System.out.println("Gewonnen!");
@@ -61,4 +62,22 @@ public class Spielfeld
     private void spielVerloren() {
         System.out.println("Verloren!");
     }
+    
+    public void erzeugung () {
+        System.out.println("0 1 2 3");
+        for (int x = 0; x < 4 ; x++) {
+            String spalte = "" + x;
+            for (int y = 0; y < 4; y++) {
+                if (spielbrett[x][y] == null) {
+                    spalte = spalte + " .";
+                }
+                else {
+                    spalte = spalte + " " + spielbrett[x][y].color;
+                }
+            }
+            System.out.println(spalte);
+        }
+    }
+    
+    
 }
