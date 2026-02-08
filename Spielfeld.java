@@ -10,6 +10,8 @@ import javafx.scene.control.Spinner;
 public class Spielfeld
 {
     private Kugeln[][] spielbrett;
+    //public boolean platz;
+    
     /**
      * Konstruktor für Objekte der Klasse Spielfeld
      */
@@ -30,7 +32,6 @@ public class Spielfeld
         System.out.println("Spiel gestartet mit 8 Kugeln!");
         //pause(1);
         //Spielfeld spielfeld = new Spielfeld();
-        //Anzeige();
         
         Begrüßung();
         spielerZuweisung();
@@ -100,5 +101,18 @@ public class Spielfeld
         }
     }
     
-    
+    public boolean platzPrüfen(int x,int y, Spieler spieler) {
+        if (x < 0 || x > 3 || y < 0 || y > 3) {
+            System.out.println("Ungültige Koordinaten! loser");
+            return false;
+        } else if (spielbrett [x][y] != null) {
+            System.out.println("Feld ist bereits belegt!");
+            return false;
+        }
+        
+        spielbrett[x][y] = new Kugeln(spieler.farbe);
+        spieler.ungenutzteKugeln--;
+
+        return true;
+    }
 }

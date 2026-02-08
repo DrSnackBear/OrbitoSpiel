@@ -6,19 +6,16 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Kugeln extends Spielfeld
+public class Kugeln
 {
     /**
      * Konstruktor für Objekte der Klasse Kugeln
      */
-    String color;
+    public String color;
     public Kugeln(String color)
     {
-        //
+        this.color = color;
     }
     
-    public void weiterschieben()
-    {
-        
-    }
+    
 }

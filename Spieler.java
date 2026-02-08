@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 /**
  * Beschreiben Sie hier die Klasse Spiler.
  * 
@@ -7,7 +7,6 @@
  */
 public class Spieler
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     public int spielerNummer;
     public String name;
     public String farbe;
@@ -20,8 +19,28 @@ public class Spieler
     public void resetUngenutzteKugeln() {
         this.ungenutzteKugeln= 8;
     }
-
+    
     //Kugel legeKugel(String farbe) { //Spieler kann Kugeln legen
       //    return new Kugel(farbe);
     //}
+    public void kugelLegen(Spielfeld spielfeld)
+    {
+        Scanner scanner = new Scanner (System.in);
+        
+        int x;
+        int y;
+        
+        boolean gelegt = false;
+        
+        while (!gelegt) {
+            System.out.println( name + " ( " + farbe + " ) , x eingeben: ");
+            x = scanner.nextInt();
+            
+            System.out.println("y eingeben: ");
+            y = scanner.nextInt();
+            
+            gelegt = spielfeld.platzPrüfen(x, y, this);
+        
+        }
+    }
     }
