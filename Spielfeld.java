@@ -11,7 +11,8 @@ public class Spielfeld
 {
     private Kugeln[][] spielbrett;
     //public boolean platz;
-    
+    private Spieler spieler1;
+    private Spieler spieler2;
     /**
      * Konstruktor für Objekte der Klasse Spielfeld
      */
@@ -29,12 +30,15 @@ public class Spielfeld
         //Spieler spieler = new Spieler(name, farbe);
         //spieler.resetUngenutzteKugeln();
         this.spielbrett = new Kugeln [4][4];
-        System.out.println("Spiel gestartet mit 8 Kugeln!");
+        //System.out.println("Spiel gestartet mit 8 Kugeln!");
         //pause(1);
         //Spielfeld spielfeld = new Spielfeld();
         
         Begrüßung();
-        spielerZuweisung();
+        //spielerZuweisung();
+        Spieler[] spieler = Spieler.spielerZuweisung();
+        spieler1 = spieler[0];
+        spieler2 = spieler[1];
         anzeige();
     }
     
@@ -44,7 +48,7 @@ public class Spielfeld
         System.out.println("Viel Spaß beim Spielen!");   
     }
     
-    public void spielerZuweisung() {
+    /*public void spielerZuweisung() {
         Scanner scanner = new Scanner(System.in);
 
         //Spieler 1
@@ -52,8 +56,8 @@ public class Spielfeld
         String name1 = scanner.nextLine();
         Spieler spieler1 = new Spieler(1, name1, "weiß");
 
-        //System.out.print("Farbe eingeben: ");
-        //String farbe = scanner.nextLine();
+        System.out.print("Farbe eingeben: ");
+        String farbe = scanner.nextLine();
         spieler1.resetUngenutzteKugeln();
 
         System.out.println(name1 + " gestartet mit 8 Kugeln!");
@@ -65,7 +69,7 @@ public class Spielfeld
         spieler2.resetUngenutzteKugeln();
         System.out.println(name2 + " gestartet mit 8 Kugeln!");
     }
-    
+    */
     public void pruefeSpielzustand() {
         /*if (spieler.getLeben() <= 0) {
             spielVerloren();
