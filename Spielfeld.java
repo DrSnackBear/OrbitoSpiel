@@ -35,6 +35,7 @@ public class Spielfeld
         //Spielfeld spielfeld = new Spielfeld();
         
 
+
         //spielerZuweisung();
         Spieler[] spieler = Spieler.spielerZuweisung();
         spieler1 = spieler[0];
@@ -43,8 +44,7 @@ public class Spielfeld
         anzeige();
     }
     
-  
-    
+ 
     public void pruefeSpielzustand() {
         /*if (spieler.getLeben() <= 0) {
             spielVerloren();
