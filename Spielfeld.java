@@ -40,6 +40,7 @@ public class Spielfeld
         spieler1 = spieler[0];
         spieler2 = spieler[1];
         anzeige();
+       
     }
     
     public void Begrüßung() {

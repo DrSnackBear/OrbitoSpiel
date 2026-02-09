@@ -12,10 +12,9 @@ public class Kugeln
      * Konstruktor für Objekte der Klasse Kugeln
      */
     public String color;
-    public Kugeln(String color)
-    {
+    //private int kugelNummer;
+    public Kugeln(String color) {
         this.color = color;
+        //this.kugelNummer = kugelNummer;
     }
-    
-    
 }
