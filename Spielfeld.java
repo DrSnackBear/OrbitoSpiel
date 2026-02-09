@@ -33,17 +33,17 @@ public class Spielfeld
         //pause(1);
         //Spielfeld spielfeld = new Spielfeld();
         
-        Begrüßung();
         spielerZuweisung();
         anzeige();
     }
     
-    public void Begrüßung() {
+    /*public void Begrüßung() {
         System.out.println("Hallo liebe Orbito-Spieler.");
         System.out.println("Gebt euren Namen ein. Der erste Spieler spielt mit der Farbe weiß und beginnt.");   
         System.out.println("Viel Spaß beim Spielen!");   
     }
-    
+    */
+   
     public void spielerZuweisung() {
         Scanner scanner = new Scanner(System.in);
 
@@ -103,7 +103,7 @@ public class Spielfeld
     
     public boolean platzPrüfen(int x,int y, Spieler spieler) {
         if (x < 0 || x > 3 || y < 0 || y > 3) {
-            System.out.println("Ungültige Koordinaten! loser");
+            System.out.println("Ungültige Koordinaten!");
             return false;
         } else if (spielbrett [x][y] != null) {
             System.out.println("Feld ist bereits belegt!");
