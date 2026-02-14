@@ -13,6 +13,7 @@ public class Spielfeld
     //public boolean platz;
     private Spieler spieler1;
     private Spieler spieler2;
+    private Spieler spieler3;
     /**
      * Konstruktor für Objekte der Klasse Spielfeld
      */
