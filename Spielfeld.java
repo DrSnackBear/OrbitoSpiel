@@ -35,43 +35,18 @@ public class Spielfeld
         //pause(1);
         //Spielfeld spielfeld = new Spielfeld();
         
-        Begrüßung();
+
+
         //spielerZuweisung();
         Spieler[] spieler = Spieler.spielerZuweisung();
         spieler1 = spieler[0];
         spieler2 = spieler[1];
+
         anzeige();
        
     }
     
-    public void Begrüßung() {
-        System.out.println("Hallo liebe Orbito-Spieler.");
-        System.out.println("Gebt euren Namen ein. Der erste Spieler spielt mit der Farbe weiß und beginnt.");   
-        System.out.println("Viel Spaß beim Spielen!");   
-    }
-    
-    /*public void spielerZuweisung() {
-        Scanner scanner = new Scanner(System.in);
-
-        //Spieler 1
-        System.out.print("Name Spieler 1: ");
-        String name1 = scanner.nextLine();
-        Spieler spieler1 = new Spieler(1, name1, "weiß");
-
-        System.out.print("Farbe eingeben: ");
-        String farbe = scanner.nextLine();
-        spieler1.resetUngenutzteKugeln();
-
-        System.out.println(name1 + " gestartet mit 8 Kugeln!");
-        //pause(1);
-        //Spieler 2
-        System.out.print("Name Spieler 2: ");
-        String name2 = scanner.nextLine();
-        Spieler spieler2 = new Spieler(2, name2, "schwarz");
-        spieler2.resetUngenutzteKugeln();
-        System.out.println(name2 + " gestartet mit 8 Kugeln!");
-    }
-    */
+ 
     public void pruefeSpielzustand() {
         /*if (spieler.getLeben() <= 0) {
             spielVerloren();
@@ -109,7 +84,7 @@ public class Spielfeld
     
     public boolean platzPrüfen(int x,int y, Spieler spieler) {
         if (x < 0 || x > 3 || y < 0 || y > 3) {
-            System.out.println("Ungültige Koordinaten! loser");
+            System.out.println("Ungültige Koordinaten!");
             return false;
         } else if (spielbrett [x][y] != null) {
             System.out.println("Feld ist bereits belegt!");
