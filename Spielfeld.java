@@ -58,7 +58,7 @@ public class Spielfeld
         } else if (spielbrett [x][y] != null) { //man kann keine Kugel über eine andere legen
             System.out.println("Feld ist bereits belegt!");
             return false;
-        } 
+        }
         
         spielbrett[x][y] = new Kugeln(spieler.farbe); //wenn alles richtig eingegeben wurde, 
         //wird eine Kugel des jeweiligen Spielers mit der jeweiligen Farbe erstellt 
@@ -67,32 +67,20 @@ public class Spielfeld
         return true;
     }
     
-    public void veränderteAnzeige() { //hier verändert sich das Spielfeld nach jeder gelegten Kugel
-        
-    }
-    
     public void pruefeSpielzustand() { //hier werden die Spieler abwechselnd nach den Kugelkoordinaten gefragt
             while (!spielFertig) {
             // Spieler nach Koordinaten fragen
             aktuellerSpieler.kugelLegen(this); // Die Methode fragt x und y ab und setzt die Kugel
             
-            //Es wird geprüft, ob die Kugeln auf gültige Felder gelegt wurden
-            if (this.platzPruefen(0, 0, spieler1)) {
-                System.out.println("Kugel erfolgreich gelegt!");
-                anzeige(); //gelegte Kugel auf dem veränderten Spielfeld wird angezeigt
-            } else {
-                System.out.println("Feld ungültig!");
-            }
-            
             // Prüfen ob das Spiel vorbei ist (z.B. alle Felder voll)
             //spielFertig = this.istVoll(); 
             
-            // Spieler wechseln
-            if (aktuellerSpieler == spieler1) {
+            if (aktuellerSpieler == spieler1) { //Spieler wechseln
                 aktuellerSpieler = spieler2;
             } else {
                 aktuellerSpieler = spieler1;
             }
+            anzeige(); //aktuelles Spielfeld mit allen gelegten Kugeln wird angezeigt
         }
     } 
     
