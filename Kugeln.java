@@ -12,10 +12,13 @@ public class Kugeln
      * Konstruktor für Objekte der Klasse Kugeln
      */
     public String color;
-    public Kugeln(String color)
-    {
+    //private int kugelNummer;
+    public Kugeln(String color) {
         this.color = color;
+        //this.kugelNummer = kugelNummer;
     }
-    
-    
+        public boolean equalsFarbe(Kugeln andere) {
+        if (andere == null) return false;       // andere Kugel existiert nicht
+        return this.color.equals(andere.color); // Vergleich der Farben
+    }
 }
