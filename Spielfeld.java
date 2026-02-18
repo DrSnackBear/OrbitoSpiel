@@ -37,9 +37,9 @@ public class Spielfeld
 
 
         //spielerZuweisung();
-        Spieler[] spieler = Spieler.spielerZuweisung();
-        spieler1 = spieler[0];
-        spieler2 = spieler[1];
+        //Spieler[] spieler = Spieler.spielerZuweisung();
+        //spieler1 = spieler[0];
+        //spieler2 = spieler[1];
 
         anzeige();
     }
@@ -91,7 +91,7 @@ public class Spielfeld
         
         spielbrett[x][y] = new Kugeln(spieler.farbe);
         spieler.ungenutzteKugeln--;
-
+        
         return true;
     }
 }
