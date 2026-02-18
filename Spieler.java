@@ -12,8 +12,10 @@ public class Spieler
     public String name; //Name des Spielers
     public String farbe; //Farbe der Kugel des Spielers
     public int ungenutzteKugeln; //Kugeln, die der Spieler noch nicht gelegt hat
+
     public Spieler(int spielerNummer, String name,String farbe ) {
         // Scanner scanner war noch als Parameter, warum aber ist die Frage?
+
         this.spielerNummer = spielerNummer; 
         this.name = name;
         this.farbe = farbe;
@@ -26,7 +28,9 @@ public class Spieler
     public void resetUngenutzteKugeln() { 
         this.ungenutzteKugeln= 8;
     }
-    
+    /**
+     * der Spieler legt seine Kugeln auf das Spielfeld
+     */
     /**
      * der Spieler legt seine Kugeln auf das Spielfeld
      */

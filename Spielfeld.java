@@ -29,11 +29,11 @@ public class Spielfeld
         this.spielbrett = new Kugeln [4][4];
         Scanner scanner = new Scanner(System.in); //ein allgemeiner Scanner wird erstellt
         
-
         //spielerZuweisung
-        //Spiel.spielerZuweisung(); //Spieler werden Zahl 0 und 1 zugewiesen und gespeichert
-        //spieler1 = spieler[0];
-        //spieler2 = spieler[1];
+        /*Spieler[] spieler = Spieler.spielerZuweisung(); //Spieler werden Zahl 0 und 1 zugewiesen und gespeichert
+        spieler1 = spieler[0];
+        spieler2 = spieler[1];
+        */
         
         aktuellerSpieler = spieler1;
         anzeige();
@@ -72,7 +72,6 @@ public class Spielfeld
         spielbrett[x][y] = new Kugeln(spieler.farbe); //wenn alles richtig eingegeben wurde, 
         //wird eine Kugel des jeweiligen Spielers mit der jeweiligen Farbe erstellt 
         spieler.ungenutzteKugeln--;                   //und von den ungenutzten Kugeln abgezogen
-
 
         return true;
     }
