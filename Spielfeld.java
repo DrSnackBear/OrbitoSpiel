@@ -10,16 +10,19 @@ import javafx.scene.control.Spinner;
 public class Spielfeld
 {
     private Kugeln[][] spielbrett;
-    //public boolean platz;
-    private Spieler spieler1;
-    private Spieler spieler2;
-    private Spieler spieler3;
-    Spieler aktuellerSpieler;
+    private Spieler spieler1; //Spieler1 wird initialisiert 
+    private Spieler spieler2; //Spieler2 wird initialisiert 
+    Spieler aktuellerSpieler; //Das ist der Spieler, der gerade am Zug ist
     boolean spielFertig = false; //das Spiel ist von Beginn an nicht fertig
+    private int xFeldLaenge = 4; //Länge einer Zeile auf dem Spielfeld
+    private int yFeldLaenge = 4; //Länger einer Spalte auf dem Spielfeld
+    boolean horizontal = false;  //Variable, die speichert ob vier gleiche Kugeln horizontal nebeneinander sind
+    boolean vertikal = false;    //Variable, die speichert ob vier gleiche Kugeln vertikal nebeneinander sind
+    boolean diagonal = false;    //Variable, die speichert ob vier gleiche Kugeln diagonal nebeneinander sind
     /**
      * Konstruktor für Objekte der Klasse Spielfeld
      */
-    public Spielfeld()
+    public Spielfeld() 
     {
         this.spielbrett = new Kugeln [4][4];
         Scanner scanner = new Scanner(System.in); //ein allgemeiner Scanner wird erstellt
@@ -67,13 +70,13 @@ public class Spielfeld
         return true;
     }
     
-    public void pruefeSpielzustand() { //hier werden die Spieler abwechselnd nach den Kugelkoordinaten gefragt
-            while (!spielFertig) {
+    public void spielAblauf() { //hier werden die Spieler abwechselnd nach den Kugelkoordinaten gefragt
+            while (!spielFertig) { //solange das Spiel nicht fertig ist
             // Spieler nach Koordinaten fragen
             aktuellerSpieler.kugelLegen(this); // Die Methode fragt x und y ab und setzt die Kugel
             
             // Prüfen ob das Spiel vorbei ist (z.B. alle Felder voll)
-            //spielFertig = this.istVoll(); 
+            pruefeSpielzustand();
             
             if (aktuellerSpieler == spieler1) { //Spieler wechseln
                 aktuellerSpieler = spieler2;
@@ -84,11 +87,27 @@ public class Spielfeld
         }
     } 
     
-    private void spielGewonnen() {
-        //System.out.println(spieler1 + "hat gewonnen!");
+    private boolean spielfeldVoll() {
+        for (int i = 0; i < xFeldLaenge; i++) {
+            for (int j = 0; j < yFeldLaenge; j++) {
+                if (spielbrett[i][j] == null) { //wenn eines der Felder noch nicht belegt ist, ist das Feld noch nicht voll
+                                                //und das Spiel noch nicht zuende
+                    return false;
+                }
+            }
+        }
+        return true; //wenn kein Feld leer war, ist das Spielfeld voll
     }
 
-    private void spielVerloren() {
-        //System.out.println(spieler2 * "hat verloren!");
+   
+    private void pruefeSpielzustand() { //hier wird geprüft,ob das Spiel gewonnen, verloren oder unentschieden ist
+        if (spielfeldVoll()) { //wenn das Spielfeld voll ist und es vorher keinen Sieg gab, ist das Spiel unentschieden
+            spielFertig = true; //das Spiel ist fertig und damit wird spielAblauf beendet
+            System.out.println("Unentschieden!");
+        } 
+        if (horizontal || vertikal || diagonal) {
+            System.out.println(spieler1 + "hat gewonnen!");
+            System.out.println(spieler2 + "hat verloren!");
+        } 
     }
 }
