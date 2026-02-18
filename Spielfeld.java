@@ -30,10 +30,10 @@ public class Spielfeld
         Scanner scanner = new Scanner(System.in); //ein allgemeiner Scanner wird erstellt
         
         //spielerZuweisung
-        /*Spieler[] spieler = Spieler.spielerZuweisung(); //Spieler werden Zahl 0 und 1 zugewiesen und gespeichert
+        Spieler[] spieler = Spieler.spielerZuweisung(); //Spieler werden Zahl 0 und 1 zugewiesen und gespeichert
         spieler1 = spieler[0];
         spieler2 = spieler[1];
-        */
+        
         
         aktuellerSpieler = spieler1;
         anzeige();
