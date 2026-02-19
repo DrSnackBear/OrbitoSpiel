@@ -24,7 +24,7 @@ public class Drehtaste
             arr[i] = arr[i - 1]; // Nach rechts verschieben
         }
         arr[0] = last; // Gespeichertes Element an den Anfang
-        */ 
+        */
         // Herr Flörchi meinte, dieses Stück code sollte im großen Teil richtig sein, nur noch anpassen muss man
     }
 

@@ -54,6 +54,7 @@ public class Spieler
         int y; //Spalten
         
         boolean gelegt = false; //zu Beginn wurden noch keine Kugeln gelegt
+        boolean gewonnen = false; //zu Beginn wurde noch nicht gewonnen
         
         while (!gelegt) { //wiederholt, solange noch nichts gelegt wird
             System.out.println(name + " (" + farbe + ") , Zeile eingeben: "); //Spieler wird nach Position x gefragt
@@ -63,7 +64,12 @@ public class Spieler
             y = scanner.nextInt();
             
             gelegt = spielfeld.platzPruefen(x, y, this); //Es wird geprüft, ob man eine Kugeln auf diese Position legen darf
+            if (!gewonnen) { //solange nichts gewonnen wurde
+                gewonnen = spielfeld.testNebeneinander(x, y, this);
+                
+            }
+        }
         
         }
     }
-    }
+   
