@@ -23,10 +23,4 @@ public class Spiel
         System.out.println("Viel Spaß beim Spielen!");   
     }
 
-    public void erstesLegen(Spieler spieler1) {
-        System.out.println( spieler1.name + "beginnt zuerst mit dem legen");
-        spieler1.kugelLegen(spielfeld);
-        
-    }
-    
 }
