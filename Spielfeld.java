@@ -117,8 +117,7 @@ public class Spielfeld
         //Spaltenformel: alle x- werte unterschiedlich, alle y-werte gleich (x+1|y) 
         //eine Diagonale: 1. (0 |0 ) (1 |1 ) (2 |2 ) (3 |3 ) von links oben nach rechts unten
         //zweite Diagonale: (3 | 0)  (2 |1 ) (1 |2 ) (0 |3 ) von rechts oben nach links unten
-        //Diagonalenformel: ( n | n) bzw. x==y oder ( n-1 | n+1);  
-            
+        //Diagonalenformel: ( n | n) bzw. x==y oder ( n-1 | n+1);              
             //horizontal/Zeile
         if (y <= xFeldLaenge - 4) { //wenn genug Platz nach rechts ist (4 Felder insgesamt)
             Kugeln k1 = spielbrett[x][y];
