@@ -7,23 +7,25 @@
  */
 public class Drehtaste
 {
-    /**
-     * Konstruktor für Objekte der Klasse Drehtaste
-     */
+    public Spielfeld spielfeld;
     public Drehtaste()
     {
+        /*
+        this.spielfeld = spielfeld;
         drehen();
+         */
     }
     
     public void drehen() {
         /*
-        public static void rotateRight(int[] arr) {
-        if (arr == null || arr.length <= 1) return;
-            int last = arr[arr.length - 1]; // Letztes Element speichern
-        for (int i = arr.length - 1; i > 0; i--) {
-            arr[i] = arr[i - 1]; // Nach rechts verschieben
+        if (spielfeld == null || spielfeld.length < 4) { 
+            return;
         }
-        arr[0] = last; // Gespeichertes Element an den Anfang
+        int last = spielbrett[spielbrett.length - 1]; // Letztes Element speichern
+        for (int i = spielbrett.length - 1; i > 0; i--) {
+            spielbrett[i] = spielbrett[i - 1]; // Nach rechts verschieben
+        }
+        spielbrett[0] = last; // Gespeichertes Element an den Anfang
         */
         // Herr Flörchi meinte, dieses Stück code sollte im großen Teil richtig sein, nur noch anpassen muss man
     }

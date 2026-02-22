@@ -21,6 +21,7 @@ public class Spielfeld
     boolean vertikal = false;    //Variable, die speichert ob vier gleiche Kugeln vertikal nebeneinander sind
     boolean diagonal = false;    //Variable, die speichert ob vier gleiche Kugeln diagonal nebeneinander sind
     boolean kugelnNebeneinander = false;
+    public Drehtaste drehtaste = new Drehtaste();
     /**
      * Konstruktor für Objekte der Klasse Spielfeld
      */
@@ -93,6 +94,10 @@ public class Spielfeld
                 aktuellerSpieler = spieler1;
             }
             anzeige(); //aktuelles Spielfeld mit allen gelegten Kugeln wird angezeigt
+            /*
+            delay(1000);
+            Drehtaste.drehen();
+             */
         }
     } 
     
