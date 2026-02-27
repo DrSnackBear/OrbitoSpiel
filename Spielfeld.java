@@ -9,7 +9,7 @@ import javafx.scene.control.Spinner;
  */
 public class Spielfeld
 {
-    private Kugeln[][] spielbrett;
+    public Kugeln[][] spielbrett;
     private Spieler spieler1; //Spieler1 wird initialisiert 
     private Spieler spieler2; //Spieler2 wird initialisiert 
     Spieler aktuellerSpieler; //Das ist der Spieler, der gerade am Zug ist

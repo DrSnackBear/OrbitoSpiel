@@ -7,7 +7,6 @@
  */
 public class Drehtaste
 {
-    public Spielfeld spielfeld;
     public Drehtaste()
     {
         /*
