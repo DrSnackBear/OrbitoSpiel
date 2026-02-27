@@ -9,14 +9,21 @@ import javafx.scene.control.Spinner;
  */
 public class Spielfeld
 {
-    private Kugeln[][] spielbrett;
+    public Kugeln[][] spielbrett;
     private Spieler spieler1; //Spieler1 wird initialisiert 
     private Spieler spieler2; //Spieler2 wird initialisiert 
     Spieler aktuellerSpieler; //Das ist der Spieler, der gerade am Zug ist
     boolean spielFertig = false; //das Spiel ist von Beginn an nicht fertig
     private int xFeldLaenge = 4; //Länge einer Zeile auf dem Spielfeld
     private int yFeldLaenge = 4; //Länger einer Spalte auf dem Spielfeld
-     /**
+    private int kugelstatus = 0; //prüft, wie viele Kugeln der gleichen Sorte nebeneinander sind
+    boolean horizontal = false;  //Variable, die speichert ob vier gleiche Kugeln horizontal nebeneinander sind
+    boolean vertikal = false;    //Variable, die speichert ob vier gleiche Kugeln vertikal nebeneinander sind
+    boolean diagonal = false;    //Variable, die speichert ob vier gleiche Kugeln diagonal nebeneinander sind
+    boolean kugelnNebeneinander = false;
+    public Drehtaste drehtaste = new Drehtaste();
+
+    /*
      * Konstruktor für Objekte der Klasse Spielfeld
      */
     public Spielfeld() 
@@ -71,6 +78,10 @@ public class Spielfeld
                 aktuellerSpieler = spieler1;
             }
             anzeige(); //aktuelles Spielfeld mit allen gelegten Kugeln wird angezeigt
+            /*
+            delay(1000);
+            Drehtaste.drehen();
+             */
         }
     } 
     
