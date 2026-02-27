@@ -23,8 +23,8 @@ public class Spielfeld
     boolean kugelnNebeneinander = false;
     public Drehtaste drehtaste = new Drehtaste();
 
-    /*
-     * Konstruktor für Objekte der Klasse Spielfeld
+     /*
+        * Konstruktor für Objekte der Klasse Spielfeld
      */
     public Spielfeld() 
     {
