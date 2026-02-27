@@ -64,10 +64,11 @@ public class Spieler
             y = scanner.nextInt();
             
             gelegt = spielfeld.platzPruefen(x, y, this); //Es wird geprüft, ob man eine Kugeln auf diese Position legen darf
-            if (!gewonnen) { //solange nichts gewonnen wurde
+            /*if (!gewonnen) { //solange nichts gewonnen wurde
                 gewonnen = spielfeld.testNebeneinander(x, y, this);
                 
             }
+            */
         }
         
         }

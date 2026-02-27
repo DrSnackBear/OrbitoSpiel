@@ -102,7 +102,7 @@ public class Spielfeld
         spielFertig = true;
         return true; //wenn kein Feld leer war, ist das Spielfeld voll
     }
-    public boolean testNebeneinander (int x, int y, Spieler spieler) {
+    /*public boolean testNebeneinander (int x, int y, Spieler spieler) {
 
         if (spielbrett[x][y] != null && spielbrett[x][y+1] != null && spielbrett[x][y+2] != null && spielbrett[x][y+3] != null) {
             System.out.println("Gewonnen!");
@@ -113,8 +113,9 @@ public class Spielfeld
         System.out.println("Noch nicht gewonnen!");
         return true;
     }
+    */
        public boolean kugelnNebeneinander() {
-       /*
+       
         // Horizontal
         for (int i = 0; i < xFeldLaenge; i++) {
             for (int j = 0; j <= yFeldLaenge - 4; j++) {
@@ -153,7 +154,7 @@ public class Spielfeld
                 Kugeln k3 = spielbrett[i+2][j+2];
                 Kugeln k4 = spielbrett[i+3][j+3];
                 if (k1 != null && k1.equalsFarbe(k2) && k1.equalsFarbe(k3) && k1.equalsFarbe(k4)) {
-                    System.out.println("Diagonaler Sieg (\\) für " + k1.color + "!");
+                    System.out.println("Diagonaler Sieg für " + k1.color + "!");
                     spielFertig = true;
                     return true;
                 }
@@ -168,7 +169,7 @@ public class Spielfeld
                 Kugeln k3 = spielbrett[i+2][j-2];
                 Kugeln k4 = spielbrett[i+3][j-3];
                 if (k1 != null && k1.equalsFarbe(k2) && k1.equalsFarbe(k3) && k1.equalsFarbe(k4)) {
-                    System.out.println("Diagonaler Sieg (/) für " + k1.color + "!");
+                    System.out.println("Diagonaler Sieg für " + k1.color + "!");
                     spielFertig = true;
                     return true;
                 }
@@ -186,11 +187,8 @@ public class Spielfeld
         //eine Diagonale: 1. (0 |0 ) (1 |1 ) (2 |2 ) (3 |3 ) von links oben nach rechts unten
         //zweite Diagonale: (3 | 0)  (2 |1 ) (1 |2 ) (0 |3 ) von rechts oben nach links unten
         //Diagonalenformel: ( n | n) bzw. x==y oder ( n-1 | n+1);    
-        /*        int count = 0;
-         * 
-         */   
-        return false;
-    }
+
+    } 
     
         /**
          * hier wird geprüft,ob das Spiel gewonnen, verloren oder unentschieden ist
@@ -201,9 +199,8 @@ public class Spielfeld
                 System.out.println("Unentschieden!");
             } 
             if (kugelnNebeneinander()) {
-               System.out.println("Sieg");
-                //System.out.println(spieler1 + "hat gewonnen!");
-                //System.out.println(spieler2 + "hat verloren!");
+               System.out.println("Gewonnen! Das Spiel ist beendet.");
+               System.out.println("Zum Neustarten: neues Spiel erstellen.");
             } 
     }
 }
