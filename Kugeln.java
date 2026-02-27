@@ -18,7 +18,7 @@ public class Kugeln
         //this.kugelNummer = kugelNummer;
     }
  
-    public boolean equalsFarbe(Kugeln andere) {
+    public boolean gleicheFarbe(Kugeln andere) {
         return andere != null && this.color.equals(andere.color);
     }
 

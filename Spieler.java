@@ -63,6 +63,9 @@ public class Spieler
             System.out.println(name + " (" + farbe + ") , Spalte eingeben: "); //Spieler wird nach Position y gefragt
             y = scanner.nextInt();
             
+            ungenutzteKugeln = ungenutzteKugeln - 1;
+            System.out.println("Spieler " + name + " hat noch " + ungenutzteKugeln + " Kugeln übrig."); //Die Anzahl der ungenutzten Kugeln wird angezeigt
+
             gelegt = spielfeld.platzPruefen(x, y, this); //Es wird geprüft, ob man eine Kugeln auf diese Position legen darf
             /*if (!gewonnen) { //solange nichts gewonnen wurde
                 gewonnen = spielfeld.testNebeneinander(x, y, this);
