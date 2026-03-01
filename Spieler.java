@@ -65,5 +65,6 @@ public class Spieler
             gelegt = spielfeld.platzPruefen(x, y, this); //Es wird geprüft, ob man eine Kugeln auf diese Position legen darf
         
         }
+        spielfeld.spielbrett = spielfeld.drehtaste.drehen(spielfeld.spielbrett);
     }
     }
