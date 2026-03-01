@@ -54,6 +54,7 @@ public class Spieler
         int y; //Spalten
         
         boolean gelegt = false; //zu Beginn wurden noch keine Kugeln gelegt
+        boolean gewonnen = false; //zu Beginn wurde noch nicht gewonnen
         
         while (!gelegt) { //wiederholt, solange noch nichts gelegt wird
             System.out.println(name + " (" + farbe + ") , Zeile eingeben: "); //Spieler wird nach Position x gefragt
@@ -62,9 +63,18 @@ public class Spieler
             System.out.println(name + " (" + farbe + ") , Spalte eingeben: "); //Spieler wird nach Position y gefragt
             y = scanner.nextInt();
             
+            ungenutzteKugeln = ungenutzteKugeln - 1;
+            System.out.println("Spieler " + name + " hat noch " + ungenutzteKugeln + " Kugeln übrig."); //Die Anzahl der ungenutzten Kugeln wird angezeigt
+
             gelegt = spielfeld.platzPruefen(x, y, this); //Es wird geprüft, ob man eine Kugeln auf diese Position legen darf
+            /*if (!gewonnen) { //solange nichts gewonnen wurde
+                gewonnen = spielfeld.testNebeneinander(x, y, this);
+                
+            }
+            */
+        }
         
         }
         spielfeld.spielbrett = spielfeld.drehtaste.drehen(spielfeld.spielbrett);
     }
-    }
+   

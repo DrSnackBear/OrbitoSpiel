@@ -17,11 +17,9 @@ public class Kugeln
         this.color = color;
         //this.kugelNummer = kugelNummer;
     }
-        public boolean equalsFarbe(Kugeln andere) {
-        if (andere == null) {
-            return false;     
-        }  // andere Kugel existiert nicht
-        
-        return this.color.equals(andere.color); // Vergleich der Farben
+ 
+    public boolean gleicheFarbe(Kugeln andere) {
+        return andere != null && this.color.equals(andere.color);
     }
+
 }
