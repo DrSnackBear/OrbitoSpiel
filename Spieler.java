@@ -73,8 +73,7 @@ public class Spieler
             }
             */
         }
-        
-        }
         spielfeld.spielbrett = spielfeld.drehtaste.drehen(spielfeld.spielbrett);
+        }
     }
    
