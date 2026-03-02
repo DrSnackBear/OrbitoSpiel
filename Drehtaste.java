@@ -16,17 +16,17 @@ public class Drehtaste
     
     public Kugeln[][] drehen(Kugeln[][] spielbrett) {
         Kugeln[][] gedrehtesSpielfeld = new Kugeln[4][4];
-        for (int y = 0; y < 3; y++){
-            gedrehtesSpielfeld[0][y+1] = spielbrett[0][y];
+        for (int y = 0; y < 3; y++){ //links, allegedly richtig
+            gedrehtesSpielfeld[y+1][0] = spielbrett[y][0];
         }
-        for (int x = 0; x < 3; x++){
-            gedrehtesSpielfeld[x+1][3] = spielbrett[x][3];
+        for (int x = 0; x < 3; x++){ //unten, ar
+            gedrehtesSpielfeld[3][x+1] = spielbrett[3][x];
         }
-        for (int y = 3; y > 1; y--){
-            gedrehtesSpielfeld[3][y-1] = spielbrett[3][y];
+        for (int y = 3; y > 0; y--){ //
+            gedrehtesSpielfeld[y-1][3] = spielbrett[y][3];
         }
-        for (int x = 3; x > 1; x--) {
-            gedrehtesSpielfeld[x-1][0] = spielbrett[x][0];
+        for (int x = 3; x > 0; x--) { 
+            gedrehtesSpielfeld[0][x-1] = spielbrett[0][x];
         }
         gedrehtesSpielfeld[1][1] = spielbrett[1][2];
         gedrehtesSpielfeld[1][2] = spielbrett[2][2];
