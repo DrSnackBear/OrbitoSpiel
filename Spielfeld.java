@@ -234,56 +234,56 @@ public class Spielfeld
 
         int vonX, vonY, nachX, nachY;
         while(true) {
-        System.out.println("Koordinaten der gegnerischen Kugel eingeben:");
-        System.out.print("Zeile: ");
-        vonX = scanner.nextInt();
-        System.out.print("Spalte: ");
-        vonY = scanner.nextInt();
+            System.out.println("Koordinaten der gegnerischen Kugel eingeben:");
+            System.out.print("Zeile: ");
+            vonX = scanner.nextInt();
+            System.out.print("Spalte: ");
+            vonY = scanner.nextInt();
 
-        // Prüfen: gültige Koordinaten
-        if (!gueltigeKoordinate(vonX, vonY)) {
-            System.out.println("Ungültige Koordinaten.");
-            continue;
-        }
+            // Prüfen: gültige Koordinaten
+            if (!gueltigeKoordinate(vonX, vonY)) {
+                System.out.println("Ungültige Koordinaten.");
+                continue;
+            }
 
-        // Prüfen: Feld belegt?
-        if (spielbrett[vonX][vonY] == null) {
-            System.out.println("Dort liegt keine Kugel.");
-            continue;
-        }
+            // Prüfen: Feld belegt?
+            if (spielbrett[vonX][vonY] == null) {
+                System.out.println("Dort liegt keine Kugel.");
+                continue;
+            }   
 
-        // Prüfen: gehört sie dem Gegner?
-        if (spielbrett[vonX][vonY].color.equals(aktuellerSpieler.farbe)) {
-            System.out.println("Das ist deine eigene Kugel.");
-            continue;
-        }
+            // Prüfen: gehört sie dem Gegner?
+            if (spielbrett[vonX][vonY].color.equals(aktuellerSpieler.farbe)) {
+                System.out.println("Das ist deine eigene Kugel.");
+                continue;
+        }   
         break;
-    }
-    while (true) {
-        System.out.println("Neue Position eingeben:");
-        System.out.print("Zeile: ");
-        nachX = scanner.nextInt();
-        System.out.print("Spalte: ");
-        nachY = scanner.nextInt();
-
-        if (!gueltigeKoordinate(nachX, nachY)) {
-            System.out.println("Ungültige Koordinaten.");
-            continue;
         }
+        while (true) {
+            System.out.println("Neue Position eingeben:");
+            System.out.print("Zeile: ");
+            nachX = scanner.nextInt();
+            System.out.print("Spalte: ");
+            nachY = scanner.nextInt();
 
-        if (spielbrett[nachX][nachY] != null) {
-            System.out.println("Feld ist bereits belegt.");
-            continue;
+            if (!gueltigeKoordinate(nachX, nachY)) {
+                System.out.println("Ungültige Koordinaten.");
+                continue;
+            }
+
+            if (spielbrett[nachX][nachY] != null) {
+                System.out.println("Feld ist bereits belegt.");
+                continue;
+            }
+
+            // Verschieben durchführen
+            spielbrett[nachX][nachY] = spielbrett[vonX][vonY];
+            spielbrett[vonX][vonY] = null;
+    
+            System.out.println("Kugel wurde verschoben.");
+            anzeige();
+            return;
         }
-
-        // Verschieben durchführen
-        spielbrett[nachX][nachY] = spielbrett[vonX][vonY];
-        spielbrett[vonX][vonY] = null;
-
-        System.out.println("Kugel wurde verschoben.");
-        anzeige();
-        return;
-    }
     }
     private boolean gueltigeKoordinate(int x, int y) {
         return x >= 0 && x < 4 && y >= 0 && y < 4;

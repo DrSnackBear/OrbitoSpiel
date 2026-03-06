@@ -22,5 +22,5 @@ public class Spiel
         System.out.println("Um eure Kugeln zu legen müsst ihr die Koordinaten auf dem Feld eingeben."); 
         System.out.println("Viel Spaß beim Spielen!");   
     }
-
+    
 }
