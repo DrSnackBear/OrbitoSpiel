@@ -280,6 +280,7 @@ public class Spielfeld
                 return;
             }
         }
+
     }
     private boolean gueltigeKoordinate(int x, int y) {
         return x >= 0 && x < 4 && y >= 0 && y < 4;
