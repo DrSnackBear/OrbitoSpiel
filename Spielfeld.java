@@ -235,6 +235,11 @@ public class Spielfeld
                     System.out.println("Ungültige Koordinaten.");
                     continue;
                 }
+
+                if (!gueltigeKoordinate(vonX, vonY)) {
+                    System.out.println("Ungültige Koordinaten.");
+                    continue;
+                }
     
                 if (spielbrett[vonX][vonY] == null) {
                     System.out.println("Dort liegt keine Kugel.");
