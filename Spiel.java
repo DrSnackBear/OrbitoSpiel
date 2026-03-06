@@ -20,6 +20,7 @@ public class Spiel
         System.out.println("Gebt euren Namen ein. Der erste Spieler spielt mit der Farbe weiß und beginnt.");
         System.out.println("Schwarz ist s und weiß ist w."); 
         System.out.println("Um eure Kugeln zu legen müsst ihr die Koordinaten auf dem Feld eingeben."); 
+        System.out.println("Nach jedem Spielzug, drehen sich alle Steine automatisch gegen den Uhrzeigersinn auf dem Feld weiter."); 
         System.out.println("Viel Spaß beim Spielen!");   
     }
     

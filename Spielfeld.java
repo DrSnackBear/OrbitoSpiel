@@ -80,10 +80,6 @@ public class Spielfeld
                 aktuellerSpieler = spieler1;
             }
             anzeige(); //aktuelles Spielfeld mit allen gelegten Kugeln wird angezeigt
-            /*
-            delay(1000);
-            Drehtaste.drehen();
-             */
         }
     } 
     
@@ -97,7 +93,7 @@ public class Spielfeld
         } 
         spielbrett[x][y] = new Kugeln(spieler.farbe); //wenn alles richtig eingegeben wurde, 
         //wird eine Kugel des jeweiligen Spielers mit der jeweiligen Farbe erstellt 
-        spieler.ungenutzteKugeln--;                   //und von den ungenutzten Kugeln abgezogen
+        //spieler.ungenutzteKugeln--;                   //und von den ungenutzten Kugeln abgezogen
 
         return true;
     }
@@ -117,7 +113,6 @@ public class Spielfeld
     }
     
        public boolean kugelnNebeneinander() {
-       
         // Horizontal
         for (int i = 0; i < xFeldLaenge; i++) {
             for (int j = 0; j <= yFeldLaenge - 4; j++) {
@@ -126,7 +121,7 @@ public class Spielfeld
                 Kugeln k3 = spielbrett[i][j+2];
                 Kugeln k4 = spielbrett[i][j+3];
                 if (k1 != null && k1.gleicheFarbe(k2) && k1.gleicheFarbe(k3) && k1.gleicheFarbe(k4)) {
-                    System.out.println("Horizontaler Sieg für " + k1.color + "!");
+                    System.out.println("Horizontale Reihe für " + k1.color + "!");
                     spielFertig = true;
                     return true;
                 }
@@ -141,7 +136,7 @@ public class Spielfeld
                 Kugeln k3 = spielbrett[i+2][j];
                 Kugeln k4 = spielbrett[i+3][j];
                 if (k1 != null && k1.gleicheFarbe(k2) && k1.gleicheFarbe(k3) && k1.gleicheFarbe(k4)) {
-                    System.out.println("Vertikaler Sieg für " + k1.color + "!");
+                    System.out.println("Vertikale Reihe für " + k1.color + "!");
                     spielFertig = true;
                     return true;
                 }
@@ -156,7 +151,7 @@ public class Spielfeld
                 Kugeln k3 = spielbrett[i+2][j+2];
                 Kugeln k4 = spielbrett[i+3][j+3];
                 if (k1 != null && k1.gleicheFarbe(k2) && k1.gleicheFarbe(k3) && k1.gleicheFarbe(k4)) {
-                    System.out.println("Diagonaler Sieg für " + k1.color + "!");
+                    System.out.println("Diagonale Reihe für " + k1.color + "!");
                     spielFertig = true;
                     return true;
                 }
@@ -171,7 +166,7 @@ public class Spielfeld
                 Kugeln k3 = spielbrett[i+2][j-2];
                 Kugeln k4 = spielbrett[i+3][j-3];
                 if (k1 != null && k1.gleicheFarbe(k2) && k1.gleicheFarbe(k3) && k1.gleicheFarbe(k4)) {
-                    System.out.println("Diagonaler Sieg für " + k1.color + "!");
+                    System.out.println("Diagonale Reihe für " + k1.color + "!");
                     spielFertig = true;
                     return true;
                 }
