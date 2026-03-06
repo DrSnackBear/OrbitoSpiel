@@ -57,23 +57,22 @@ public class Spieler
         boolean gewonnen = false; //zu Beginn wurde noch nicht gewonnen
         
         while (!gelegt) { //wiederholt, solange noch nichts gelegt wird
-            System.out.println(name + " (" + farbe + ") , Zeile eingeben: "); //Spieler wird nach Position x gefragt
-            x = scanner.nextInt();
+            System.out.println(name + " (" + farbe + ") , Zahl eingeben: "); //Spieler wird nach Position x gefragt
+            x = scanner.nextInt(); //Eingabe für die Zeilen
             
-            System.out.println(name + " (" + farbe + ") , Spalte eingeben: "); //Spieler wird nach Position y gefragt
-            y = scanner.nextInt();
+            System.out.println(name + " (" + farbe + ") , Buchstabe eingeben: "); //Spieler wird nach Position y gefragt
+            //y = scanner.nextInt(); //Eingabe für die Spalten
+            
+            String eingabe = scanner.next();  // charAt() funktioniert nur auf einem String, deshalb muss man die Eingabe(scanner) als String speichern
+            y = eingabe.charAt(0) - 'a';      // a=0, b=1, c=2, d=3; Eingabe für die Spalten werden für den Computer in Zahlen übersetzt
             
             ungenutzteKugeln = ungenutzteKugeln - 1;
             System.out.println("Spieler " + name + " hat noch " + ungenutzteKugeln + " Kugeln übrig."); //Die Anzahl der ungenutzten Kugeln wird angezeigt
 
             gelegt = spielfeld.platzPruefen(x, y, this); //Es wird geprüft, ob man eine Kugeln auf diese Position legen darf
-            /*if (!gewonnen) { //solange nichts gewonnen wurde
-                gewonnen = spielfeld.testNebeneinander(x, y, this);
-                
-            }
-            */
+
         }
         spielfeld.spielbrett = spielfeld.drehtaste.drehen(spielfeld.spielbrett);
-        }
+    }
     }
    

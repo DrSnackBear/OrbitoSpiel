@@ -43,22 +43,24 @@ public class Spielfeld
        
     }
     
-    /**
-     * Spielfeld wird angezeigt
-     */
-    public void anzeige () { 
-        System.out.println("  0 1 2 3"); //Spaltennummerierung
-        for (int x = 0; x < 4 ; x++) { // Jede neue Zeile wird von 0-3 mit Leerzeichen nummeriert
-            String spalte = "" + x; 
-            for (int y = 0; y < 4; y++) { 
-                if (spielbrett[x][y] == null) { //Jedes leeres Feld wird mit einem Punkt markiert
-                    spalte = spalte + " ."; 
+    public void anzeige () { //Spielfeld wird angezeigt    
+        System.out.println("  a b c d"); // Spalten mit Buchstaben
+    
+        for (int x = 0; x < 4 ; x++) { // Zeilen 0-3 links
+            String zeile = "" + x;
+    
+            for (int y = 0; y < 4; y++) {
+    
+                if (spielbrett[x][y] == null) { // leeres Feld
+                    zeile = zeile + " .";
+                } 
+                else { // Kugelfarbe anzeigen
+                    zeile = zeile + " " + spielbrett[x][y].color;
                 }
-                else { //andernfalls wird die Farbe der gelegten Kugel angezeigt
-                    spalte = spalte + " " + spielbrett[x][y].color;
-                }
+    
             }
-            System.out.println(spalte); //die Spalte mit der Zeilennummerierung wird gedruckt
+    
+            System.out.println(zeile);
         }
     }
     
@@ -67,7 +69,7 @@ public class Spielfeld
      */
     public void spielAblauf() { 
             while (!spielFertig) { //solange das Spiel nicht fertig ist
-            verschieben(aktuellerSpieler);
+            //verschieben(aktuellerSpieler);
             aktuellerSpieler.kugelLegen(this); // Die Methode fragt x und y ab und setzt die Kugel
                    
             pruefeSpielzustand(); //prüft, ob das Spiel vorbei ist (Unentschieden, Gewinn oder Niederlage)
@@ -113,18 +115,7 @@ public class Spielfeld
         spielFertig = true;
         return true; //wenn kein Feld leer war, ist das Spielfeld voll
     }
-    /*public boolean testNebeneinander (int x, int y, Spieler spieler) {
-
-        if (spielbrett[x][y] != null && spielbrett[x][y+1] != null && spielbrett[x][y+2] != null && spielbrett[x][y+3] != null) {
-            System.out.println("Gewonnen!");
-            anzeige();
-            return false;
-        }              
- 
-        System.out.println("Noch nicht gewonnen!");
-        return true;
-    }
-    */
+    
        public boolean kugelnNebeneinander() {
        
         // Horizontal
@@ -214,12 +205,13 @@ public class Spielfeld
                System.out.println("Zum Neustarten: neues Spiel erstellen.");
             } 
     }
+    
     public void verschieben(Spieler aktuellerSpieler) {
         Scanner scanner = new Scanner(System.in);
 
         String antwort;
         
-        while(true){
+        while(true){ 
             System.out.println("Möchtest du eine gegnerische Kugel verschieben? (j/n)");
             antwort = scanner.next();
                 if (antwort.equalsIgnoreCase("j")) {
