@@ -222,7 +222,7 @@ public class Spielfeld
                     System.out.println("Ungültige Eingabe. Bitte nur 'j' oder 'n' eingeben.");
                 }
             }
-    
+       
             int vonX, vonY, nachX, nachY;
             while(true) {
                 System.out.println("Koordinaten der gegnerischen Kugel eingeben:");
